@@ -23,6 +23,14 @@ Before you begin, ensure you have met the following requirements:
 - You have installed Node.js and npm.
 - You have a modern web browser.
 
+To install the project, follow these steps:
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/TariQMah/landingPage.git
+   ```
+
 First, run the development server:
 
 ```bash
