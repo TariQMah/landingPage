@@ -20,7 +20,7 @@ const ContactSection = () => {
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     await axios
-      .post(process.env.API_URL as string, data)
+      .post(process.env.NEXT_PUBLIC_API_URL as string, data)
       .then(({ data }: any) => {
         data?.status
           ? toast.success(data?.message)
