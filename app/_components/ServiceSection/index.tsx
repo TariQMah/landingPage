@@ -8,8 +8,12 @@ const ServiceSection = () => {
   return (
     <div className="container">
       <div className={styles.flex}>
-        <div className="">
-          <Image src={serviceImg} alt="service" />
+        <div className={styles.media}>
+          <Image
+            src={serviceImg}
+            alt="service"
+            style={{ width: "100%", height: "auto" }}
+          />
         </div>
         <div className={styles.textArea}>
           <Heading title="Usce arcu turpis, vehicula in elementum tincidunt, faucibus at ligula." />

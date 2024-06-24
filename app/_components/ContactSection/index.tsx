@@ -3,6 +3,8 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import styles from "./contactSection.module.css";
+import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 
 type Inputs = {
   name: string;
@@ -14,10 +16,20 @@ const ContactSection = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    await axios
+      .post("http://localhost/tariq/wsp-json/tariq/v1/contact-form", data)
+      .then(({ data }: any) => {
+        data?.status
+          ? toast.success(data?.message)
+          : toast.error(data?.message);
+      })
+      .catch((errors) => {
+        toast.error(errors?.message);
+      });
+  };
 
   return (
     <div className={styles.container}>
@@ -37,7 +49,14 @@ const ContactSection = () => {
             <div>
               <input
                 placeholder="Email"
-                {...register("email", { required: true })}
+                {...register("email", {
+                  required: "required",
+                  pattern: {
+                    value: /\S+@\S+\.\S+/,
+                    message: "Entered value does not match email format",
+                  },
+                })}
+                type="email"
               />
               {errors.email && <span>Email is required</span>}
             </div>

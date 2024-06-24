@@ -5,6 +5,7 @@ import VideoSection from "./_components/VideoSection";
 import KeyPointsSection from "./_components/KeyPointSection";
 import ServiceSection from "./_components/ServiceSection";
 import ContactSection from "./_components/ContactSection";
+import { Toaster } from "react-hot-toast";
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
       <KeyPointsSection />
       <ServiceSection />
       <ContactSection />
+
+      <Toaster />
     </main>
   );
 }

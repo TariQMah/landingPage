@@ -93,14 +93,20 @@
     min-height: 600px;
     position: relative;
   }
+  .innerDiv {
+    padding: 0 20px;
+    transform: translateY(70px);
+  }
 
-  .grid &&::after {
+  .grid::after {
+    content: " ";
     background: url("../../../public/images/pointsBg.jpg") center;
     position: absolute;
     height: 100%;
     width: 100%;
     right: 0;
     top: 0;
+    z-index: -1;
   }
 }
 

@@ -2,6 +2,27 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+# Tariq Technical Test
+
+## Overview
+
+This project is a responsive landing page built using NextJS.
+
+## Features
+
+- Responsive design that adjusts to various screen sizes
+- Custom play button
+- Thumbnail preview before video loads
+- Looping video functionality
+- Nice hover animation
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- You have installed Node.js and npm.
+- You have a modern web browser.
+
 First, run the development server:
 
 ```bash

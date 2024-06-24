@@ -39,6 +39,10 @@
   border: 0;
   padding: 10px;
 }
+.form > div > input::placeholder,
+.form > div > textarea::placeholder {
+  color: #fff;
+}
 .form > input[type="submit"] {
   width: 100%;
   padding: 10px 20px;

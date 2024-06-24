@@ -1,0 +1,77 @@
+.container {
+  width: 100%;
+  margin: 50px auto 150px;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  margin: 50px auto 150px;
+  position: relative;
+}
+
+.responsivePlayer {
+  position: relative;
+  padding-top: 60.25%;
+  margin-bottom: 40px;
+}
+.responsivePlayer > div {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.videoImage {
+  width: 100%;
+  object-fit: contain;
+}
+.playIcon {
+  width: 50px;
+  position: absolute;
+  top: 35%;
+  height: 50px;
+  border-radius: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 222;
+  border: 0.5px solid var(--primary);
+  color: var(--primary);
+}
+
+@media (min-width: 576px) {
+  .playIcon {
+    top: 45%;
+    height: 80px;
+    width: 80px;
+  }
+  .responsivePlayer {
+    padding-top: 60.25%;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Your CSS rules for screens larger than 992px */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Your CSS rules for screens larger than 1200px */
+  .responsivePlayer {
+    padding-top: 38.25%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin: 40px 20px;
+  }
+}
