@@ -1,0 +1,126 @@
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  background: url("../../../public/images/pointsBg.jpg") center;
+  background-size: cover;
+  height: 733px;
+}
+
+.grid {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  transition: background 0.3s ease;
+  border-right: 1px solid rgba(126, 126, 126, 0.4);
+  background: rgba(7, 45, 58, 0.4);
+  position: relative;
+  padding: 10px;
+}
+.grid:last-child {
+  border-right: none !important;
+}
+.grid:hover {
+  background: rgba(7, 45, 58, 0.5);
+}
+.innerDiv {
+  transform: translateY(50px);
+  flex-direction: column;
+  gap: 30px;
+  display: flex;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.innerDiv p {
+  opacity: 0;
+  color: #fff;
+  transition: transform 0.3s ease 0.3s, opacity 0.3s ease 0.3s;
+  margin: 0;
+  transform: translateY(20px);
+}
+.grid:hover .innerDiv {
+  transform: translateY(-50px);
+}
+.grid:hover .innerDiv p {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.icon {
+  scale: 2;
+  color: #fff;
+  border-radius: 100%;
+  fill: none;
+  margin: 20px 20px;
+  stroke: #000;
+  width: 30px;
+  height: 30px;
+  stroke-width: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: background-color 0.4s ease;
+  border: 0.5px solid #fff;
+}
+
+.grid:hover .icon {
+  color: #000;
+  background-color: #fff;
+  border-color: #000;
+}
+.grid h2 {
+  color: #fff;
+  transition: transform 0.9s ease;
+}
+
+.text {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 576px) {
+  /* Your CSS rules for screens larger than 576px */
+  .container {
+    flex-direction: column;
+    height: auto;
+    background: none;
+  }
+  .grid {
+    min-height: 600px;
+    position: relative;
+  }
+
+  .grid &&::after {
+    background: url("../../../public/images/pointsBg.jpg") center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Your CSS rules for screens larger than 992px */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Your CSS rules for screens larger than 1200px */
+}
+
+@media (min-width: 1400px) {
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin: 40px 20px;
+  }
+}

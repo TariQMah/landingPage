@@ -1,8 +1,26 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import type { Metadata } from "next";
+import localFont from "@next/font/local";
+
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const univers = localFont({
+  src: [
+    {
+      path: "../public/fonts/Univers-Light.woff2",
+      weight: "200",
+    },
+    {
+      path: "../public/fonts/Univers.woff2",
+      weight: "400",
+    },
+    {
+      path: "../public/fonts/Univers-Bold.woff2",
+      weight: "700",
+    },
+  ],
+  variable: "--font-univers",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={univers.className}>{children}</body>
     </html>
   );
 }

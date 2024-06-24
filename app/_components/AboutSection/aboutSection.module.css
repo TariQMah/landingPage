@@ -1,0 +1,41 @@
+.container {
+  width: 100%;
+  margin: 40px auto;
+  text-align: center;
+}
+.icon {
+  width: 70px;
+  height: 70px;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.heading {
+  margin: 20px 0;
+  color: #000;
+  text-align: center;
+}
+
+.text {
+  color: #000;
+  font-size: 1.3rem;
+  margin-bottom: 50px;
+  line-height: 2rem;
+  font-weight: 200;
+}
+
+.callToAction {
+  background: transparent;
+  border: var(--primary) 1px solid;
+  padding: 15px 30px;
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 0 auto;
+  width: 300px;
+}
